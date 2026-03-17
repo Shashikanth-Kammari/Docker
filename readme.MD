@@ -7,6 +7,9 @@ docker ps -a
 #### How we can see docker images
 docker images
 
+### docker start
+docker start <container id>
+
 ### how we can build the image 
 docker run -d -p 8000:80 nginx
 
