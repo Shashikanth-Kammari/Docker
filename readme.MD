@@ -38,6 +38,26 @@ systemctl start docker
 ### docekr status
 systemctl status docker
 
+### Install docker in REDHAT server
+as super user or root user:
+
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+as root user run below commands as well
+systemctl start docker
+systemctl status docker
+systemctl enable docker
 
 
+### we need to come out from super or root user then run below commands
 
+docker ps 
+
+#### we neeed add teh user to docker group then only run docker commands
+
+sudo usermod -aG docker ec2-user
+
+then restart the server then we can run the docker commands 
