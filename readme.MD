@@ -61,3 +61,8 @@ docker ps
 sudo usermod -aG docker ec2-user
 
 then restart the server then we can run the docker commands 
+
+### Docker instructions 
+Dockerfile is build the custom images
+
+FROM ---> is the Base OS for the Image
