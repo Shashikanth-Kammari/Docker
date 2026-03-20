@@ -1,6 +1,10 @@
 #!/bin/bash
 
 set -e
+
+echo "git installation"
+sudo dnf install git -y
+
 echo "Installing required packages..."
 sudo dnf install -y dnf-plugins-core
 
