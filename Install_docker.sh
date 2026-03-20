@@ -1,20 +1,6 @@
 #!/bin/bash
 
 set -e
-
-echo "Updating system..."
-sudo dnf update -y
-
-echo "Removing old versions (if any)..."
-sudo dnf remove -y docker \
-                docker-client \
-                docker-client-latest \
-                docker-common \
-                docker-latest \
-                docker-latest-logrotate \
-                docker-logrotate \
-                docker-engine || true
-
 echo "Installing required packages..."
 sudo dnf install -y dnf-plugins-core
 
