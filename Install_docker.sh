@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "===== Updating system ====="
-sudo dnf update -y
-
 echo "===== Installing required tools ====="
 sudo dnf install -y yum-utils device-mapper-persistent-data lvm2
 
