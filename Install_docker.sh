@@ -1,31 +1,33 @@
 #!/bin/bash
 
-set -e
+echo "===== Updating system ====="
+sudo dnf update -y
 
-echo "git installation"
-sudo dnf install git -y
+echo "===== Installing required tools ====="
+sudo dnf install -y yum-utils device-mapper-persistent-data lvm2
 
-echo "Installing required packages..."
-sudo dnf install -y dnf-plugins-core
-
-echo "Adding Docker repository..."
+echo "===== Adding Docker CE repository ====="
 sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
-echo "Installing Docker..."
+echo "===== Installing Docker ====="
 sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-echo "Starting Docker service..."
-sudo systemctl start docker
+echo "===== Starting containerd ====="
+sudo systemctl enable --now containerd
 
-echo "Enabling Docker on boot..."
-sudo systemctl enable docker
+echo "===== Fixing iptables issue (important for RHEL 9/10) ====="
+sudo alternatives --set iptables /usr/sbin/iptables-legacy || true
 
-echo "Adding user to Docker group..."
+echo "===== Starting Docker ====="
+sudo systemctl enable --now docker
+
+echo "===== Adding user to Docker group ====="
 sudo usermod -aG docker $USER
 
-echo "Docker installation completed successfully!"
-
-echo "Docker version:"
+echo "===== Verifying Docker ====="
 docker --version
 
-echo "⚠️ Logout and login again to use Docker without sudo."
+echo "===== Running test container ====="
+sudo docker run hello-world
+
+echo "===== Docker installation completed ====="
