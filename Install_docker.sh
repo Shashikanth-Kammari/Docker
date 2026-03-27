@@ -27,4 +27,4 @@ docker --version
 echo "===== Running test container ====="
 sudo docker run hello-world
 
-echo "===== Docker installation completed ====="
+echo "===== Docker installation completed. ====="
