@@ -1,3 +1,9 @@
+
+Flow diagram for Docker 
+
+![docker](docker_flow_animated.gif)
+
+
 ### how we can check run containers
 docker ps 
 
