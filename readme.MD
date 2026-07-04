@@ -1,7 +1,7 @@
 
 Flow diagram for Docker 
 
-![docker](docker_flow_animated.gif)
+![Docker flow](docker_flow_animated.svg)
 
 
 ### how we can check run containers
