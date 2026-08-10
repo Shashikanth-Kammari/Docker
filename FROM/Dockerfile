@@ -8,5 +8,5 @@ WORKDIR /opt/server
 COPY package.json .
 COPY *.js .
 RUN npm install
-CMD ["www.google.com"]
+CMD ["www.facebook.com"]
 ENTRYPOINT ["ping", "-c5"]
