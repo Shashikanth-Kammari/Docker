@@ -3,6 +3,8 @@ Flow diagram for Docker
 
 ![Docker flow](docker_flow_animated.svg)
 
+CMD - can be overriden 
+Entry Point - We can't overriden
 
 ### how we can check run containers
 docker ps 
