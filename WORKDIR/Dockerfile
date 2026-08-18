@@ -3,4 +3,4 @@ RUN mkdir /app
 WORKDIR /app 
 #setup the pwd
 RUN pwd
-CMD ["sleep","100"]
+CMD ["sleep","120"]
