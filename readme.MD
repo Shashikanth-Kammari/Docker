@@ -82,4 +82,7 @@ ADD  --> it will copy the content from the external sources links
 ENV --> we can use where ever we want
 EXPose --> it will give the information oprt details, it is do nothing 
 LABEL  --> filter the containers
-ONBUILD  --> 
+ONBUILD  --> when we use the our image we can make some mandatory thing to be done like they 
+             if someone use the our image they should have the indeac.html file first 
+RUN ---> it will excute the command which we are providing
+
