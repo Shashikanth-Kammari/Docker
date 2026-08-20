@@ -6,4 +6,4 @@ ARG TRAINER=Shashikanth
 ARG Duration=120HRS
 ENV Duration=${Duration}
 RUN echo "Course is: ${COURSE}, Trainer is: ${TRAINER}, Duration is: ${Duration}"
-CMD [ "sleep","120" ]
+CMD [ "sleep","60" ]
