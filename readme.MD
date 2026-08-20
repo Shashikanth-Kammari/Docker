@@ -23,14 +23,15 @@ docker start <container id>
 docker run -d -p 8000:80 nginx
 
 docker run = docker pull + docker create + docker run
--d 'running in backgroud'
--p 'unableing port for acces through the internet'
-80 'nginx por number'
+-d 'running in backgroud i.e detach mode'
+-p 'port able to access'
+80 'nginx port number' it should be 80 beacause nginx runnig on port 80
+8000 -this is host port not any port we can give
 nginx 'image name'
 
 #### how we can remove the container
 
-docker rm <container id>
+docker rm <container id> --remove the container  
 docker rm -f <container id>  --- forceful way
 docker rm `docker ps -a -q`  ---this is for removing all the container at a time
 
