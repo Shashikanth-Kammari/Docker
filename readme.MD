@@ -76,3 +76,10 @@ then restart the server then we can run the docker commands
 Dockerfile is build the custom images
 
 FROM ---> is the Base OS for the Image
+WORKDIR --> we can set the work directory move to that directory
+COPY   --> it is copy the content form local only
+ADD  --> it will copy the content from the external sources links
+ENV --> we can use where ever we want
+EXPose --> it will give the information oprt details, it is do nothing 
+LABEL  --> filter the containers
+ONBUILD  --> 
