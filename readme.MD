@@ -10,7 +10,7 @@ ARG --only works at one time and we can make that default value or we can change
 ### how we can check run containers
 docker ps 
 
-### how we can check all containers status weather running and stopped 
+### how we can check all containers status all status
 docker ps -a
 
 #### How we can see docker images
