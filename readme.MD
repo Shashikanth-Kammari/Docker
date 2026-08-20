@@ -5,6 +5,7 @@ Flow diagram for Docker
 
 CMD - can be overriden 
 Entry Point - We can't overriden
+ARG --only works at one time and we can make that default value or we can change the as out requirment
 
 ### how we can check run containers
 docker ps 
