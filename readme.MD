@@ -32,7 +32,7 @@ nginx 'image name'
 #### how we can remove the container
 
 docker rm <container id> --remove single the container  
-docker rm -f <container id>  --- forceful way
+docker rm -f <container id>  --- forceful way for removing the container
 docker rm `docker ps -a -q`  ---this is for removing all the container at a time
 
 ### how we can remove the image
