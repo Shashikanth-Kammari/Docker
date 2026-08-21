@@ -88,3 +88,4 @@ RUN ---> it will excute the command which we are providing
 USER --> It will create the user for access the container because the container default acceess providing entity 
          we need to restrict the access for un authorized users for security.
 
+docker build -t nginx:v1.0.0
