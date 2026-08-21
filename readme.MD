@@ -89,3 +89,63 @@ USER --> It will create the user for access the container because the container 
          we need to restrict the access for un authorized users for security.
 
 docker build -t nginx:v1.0.0
+
+pipeline {
+    agent k8s
+    stages {
+        stage('checkput'){
+            steps{
+                sh ' checkout the code '
+            }
+        }
+        stage('dependencies scan'){
+            steps{
+                sh 'scan the depencies with sonar qube'
+            }
+        }
+        stage('scan the secrets scan'){
+            steps{
+                sh 'scan passwords and credentials keys'
+            }
+        }
+        stage('build the image){
+            steps{
+                sh 'docker build -t nginx
+            }
+        stage('scan the image'){
+            steps{
+                sh scan the image for the security like credentils keys and security and '   
+            }
+        }
+        stage('push iamge to docker'){
+            steps{
+                scripts{
+                    docker push url/usename/image:version #it shpuld be unique for identification for the image for future reference 
+                }
+            }
+        stage('deploy')
+            steps{
+                scripts{
+                    we can deploy the image to running instance for the application content we should make run the deployment thought the kubectl
+                    kubectl deploy deploymentname -n namespace 
+                }
+            }
+        }
+        }
+        }
+    }
+CI
+===
+    CHECKOUT 
+    SAST
+    INSTALL DEPENDENCIES 
+    SCAN THE DEPENDENCIES 
+    SCAN THE SECRETS 
+    BUILD THE IMAGE 
+    SCAN THE IMAGE 
+    PUSH THE IAMGE TO DOCKER HUB 
+CD
+===
+    DAST -dynamic application security testing 
+    PULL THE IAMGE FROM DOCKER HUB
+    DEPLOY THE IMAGE TO K8S
