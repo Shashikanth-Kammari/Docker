@@ -90,6 +90,11 @@ USER --> It will create the user for access the container because the container 
 
 docker build -t nginx:v1.0.0
 
+docker ps -a
+
+docker exec -it container id bash --we can see the container loging 
+docker hase defult secuirty we can access directky we need to secure by implementinf some statgyes like we need to create user fopr this in image level so the that perrticuat use can acces the container and degub it 
+
 pipeline {
     agent k8s
     stages {
